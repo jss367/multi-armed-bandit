@@ -26,8 +26,8 @@ function initializeArms() {
 // Run the ε-greedy algorithm simulation
 function runSimulation() {
     const numArms = arms.length;
+    const numTrials = document.getElementById('numTrials').value; // Get number of trials from user input
     const epsilon = 0.1; // Exploration factor
-    const trials = 1000; // Number of trials to run
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
 
@@ -36,7 +36,7 @@ function runSimulation() {
         arms[i] = parseFloat(document.getElementById(`arm${i}`).value);
     }
 
-    for (let t = 0; t < trials; t++) {
+    for (let t = 0; t < numTrials; t++) {
         let chosenArm;
         if (Math.random() < epsilon) {
             // Explore: randomly choose an arm

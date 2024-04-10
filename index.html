@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi-Armed Bandit Demo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <h1>Multi-Armed Bandit Problem Solver</h1>
-<div>
-    <label for="numArms">Number of Arms:</label>
-    <input type="number" id="numArms" name="numArms" min="2" max="10" value="3">
-    <button onclick="initializeArms()">Set Arms</button>
-</div>
-<div id="armsInputs"></div>
-<div id="results"></div>
+    <div>
+        <label for="numArms">Number of Arms:</label>
+        <input type="number" id="numArms" name="numArms" min="2" max="10" value="3">
+        <button onclick="initializeArms()">Set Arms</button>
+    </div>
+    <div id="armsInputs"></div>
+    <div id="results"></div>
+
+    <script src="script.js"></script> <!-- Ensure this is at the bottom of the body for proper loading -->
 </body>
 </html>
